@@ -8,5 +8,15 @@ export default defineNuxtConfig({
         public: {
           apiBase: '/api'
         }
+    },
+
+    vite: {
+      css: {
+        preprocessorOptions: {
+          scss: {
+            additionalData: '@use "@/assets/main.scss" as *;'
+          }
+        }
+      }
     }
 })
