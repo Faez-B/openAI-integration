@@ -5,4 +5,6 @@
         This is an auto-imported component
       </AppAlert>
     </div>
+
+    <!-- <img src="/img/house.png" alt="Discover Nuxt 3 assets"> -->
 </template>
