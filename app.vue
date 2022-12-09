@@ -1,6 +1,8 @@
 <script setup>
-  // auto import of useRuntimeConfig
+  // auto import of useRuntimeConfig & useAppConfig
   const runtimeConfig = useRuntimeConfig()
+
+  const appConfig = useAppConfig()
 </script>
 
 <template>
