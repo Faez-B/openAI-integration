@@ -6,7 +6,7 @@ export default defineNuxtConfig({
         apiSecret: '123',
         // Keys within public are also exposed client-side
         public: {
-          apiBase: '/api'
+          apiBase: 'https://jsonplaceholder.typicode.com/'
         }
     },
 
