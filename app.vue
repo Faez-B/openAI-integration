@@ -2,21 +2,30 @@
   import "./node_modules/bootstrap/dist/css/bootstrap.min.css"
   import "./node_modules/bootstrap-icons/font/bootstrap-icons.css"
   // auto import of useRuntimeConfig & useAppConfig
-  const runtimeConfig = useRuntimeConfig()
+  const runtimeConfig = useRuntimeConfig();
 
-  const appConfig = useAppConfig()
+  const appConfig = useAppConfig();
 </script>
 
 <template>
   <div>
 
-    <!-- <NuxtWelcome /> -->
-
     <AppHeader/>
 
-    <main class="container">
+    <!-- <main v-if="store.sidebar === false" class="container">
       <NuxtPage />
-    </main>
+    </main> -->
 
+    <main class="container-fluid">
+      <div class="row">
+        <div class="col-2 px-0">
+          <OpenAISideBar />
+        </div>
+        <div class="col-10">
+          <NuxtPage />
+        </div>
+      </div>
+    </main>
+    
   </div>
 </template>

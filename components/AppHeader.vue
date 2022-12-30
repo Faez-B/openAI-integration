@@ -25,21 +25,9 @@
                             </NuxtLink>
                         </li>
                         <li>
-                            <NuxtLink to="/about" class="nav-link text-white">
-                                <i class="bi bi-file-person"></i>
-                                About
-                            </NuxtLink>
-                        </li>
-                        <li>
-                            <NuxtLink to="/post/1" class="nav-link text-white">
-                                <i class="bi bi-table"></i>
-                                Post 1
-                            </NuxtLink>
-                        </li>
-                        <li>
-                            <NuxtLink to="/post/2" class="nav-link text-white">
-                                <i class="bi bi-grid"></i>
-                                Post 2
+                            <NuxtLink to="/openai" class="nav-link text-white">
+                                <i class="bi bi-robot"></i>
+                                Open AI
                             </NuxtLink>
                         </li>
                     </ul>
