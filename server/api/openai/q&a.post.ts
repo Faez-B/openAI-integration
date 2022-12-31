@@ -1,5 +1,3 @@
-// import getPromptResponse from "../generate";
-
 export default defineEventHandler( async (event) => {
     const body = await readBody(event);
     const { prompt } = body;
@@ -12,8 +10,6 @@ export default defineEventHandler( async (event) => {
         freq_penalty : 0.0, 
         pres_penalty : 0.0
     };
-
-    // const response = await getPromptResponse(prompt, otherParams);
 
     const response = await $fetch('/api/generate', { method: 'POST', body: { prompt, otherParams } });
 

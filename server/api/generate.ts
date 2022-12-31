@@ -1,10 +1,5 @@
 import { Configuration, OpenAIApi } from "openai";
 
-// js
-// require('dotenv').config();
-// const { Configuration, OpenAIApi } = require("openai");
-
-// ts
 const runtimeConfig = useRuntimeConfig();
 const { OPENAI_API_KEY } = runtimeConfig;
 
@@ -14,7 +9,6 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration);
 
-// ts
 type otherParams = {
     model: string,
     temperature: number,
@@ -24,10 +18,6 @@ type otherParams = {
     presence_penalty: number,
 };
 
-// js
-// export default async function getPromptResponse(prompt, otherParams) {
-
-// ts
 async function getPromptResponse(prompt : string, otherParams : otherParams) {
     const { model, temperature, max_tokens, top_p, frequency_penalty, presence_penalty } = otherParams;
 
