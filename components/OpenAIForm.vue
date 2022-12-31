@@ -45,7 +45,7 @@
     </form>
 
     <h5 v-if="response">
-        Réponse :
+        Answer :
     </h5>
 
     <div id="response" class="p-3 border rounded-3" v-if="response">
