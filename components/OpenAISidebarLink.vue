@@ -12,8 +12,8 @@
 </script>
 
 <template>
-    <li class="nav-item">
-        <NuxtLink :to=link class="nav-link d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+    <li class="nav-item md-w-100">
+        <NuxtLink :to=link class="nav-link d-flex align-items-center mb-0 me-md-auto text-white text-decoration-none">
             <i class="bi pe-none me-2" :class="icon"></i>
             <span class="fs-6">{{ title }}</span>
         </NuxtLink>

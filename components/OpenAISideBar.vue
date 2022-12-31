@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar">
+    <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar mb-3 md-mb-0">
 
         <div class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
             <i class="bi bi-robot pe-none me-2"></i>
@@ -41,5 +41,26 @@
         max-height: 94vh;
         overflow: auto;
         box-shadow: inset white -7px 0px 6px 0px;
+    }
+
+    @media screen and (max-width: 768px) {
+        .sidebar {
+            box-shadow: inset white -1px 3px 12px -6px;
+            overflow: hidden;
+        }
+
+        ul {
+            flex-direction: row !important;
+            flex-wrap: initial;         
+            overflow: auto;   
+        }
+
+        ul li a {
+            margin-bottom: 0;
+        }
+
+        hr {
+            margin: .5rem 0;            
+        }
     }
 </style>
