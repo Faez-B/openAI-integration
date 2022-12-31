@@ -40,5 +40,6 @@
     .sidebar {
         max-height: 94vh;
         overflow: auto;
+        box-shadow: inset white -7px 0px 6px 0px;
     }
 </style>

@@ -16,10 +16,16 @@ type otherParams = {
     top_p: number,
     frequency_penalty: number,
     presence_penalty: number,
+    stop?: string[],
+    additional_prompt?: string,
 };
 
 async function getPromptResponse(prompt : string, otherParams : otherParams) {
-    const { model, temperature, max_tokens, top_p, frequency_penalty, presence_penalty } = otherParams;
+    const { model, temperature, max_tokens, top_p, frequency_penalty, presence_penalty, additional_prompt, stop } = otherParams;
+
+    if (additional_prompt) {
+        prompt = additional_prompt + prompt;
+    }
 
     const completion = await openai.createCompletion({
         model,
@@ -29,6 +35,7 @@ async function getPromptResponse(prompt : string, otherParams : otherParams) {
         top_p,
         frequency_penalty,
         presence_penalty,
+        stop,
     });
 
     return completion.data.choices[0].text;

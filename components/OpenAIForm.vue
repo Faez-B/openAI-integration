@@ -5,6 +5,7 @@
 
     const { link } = props;
 
+    const input = ref("");
     const response = ref(null);
 
     const getResponse = async (prompt, link) => {
@@ -26,7 +27,8 @@
 
     const formSubmit = (e) => {
         e.preventDefault();
-        getResponse(e.target[0].value, link);
+        // getResponse(e.target[0].value, link);
+        getResponse(input.value, link);
     }
 </script>
 
@@ -37,14 +39,14 @@
 
     <form @submit="formSubmit">
         <div class="mb-3">
-            <textarea class="form-control" id="text-field" placeholder="Enter text"></textarea>
+            <textarea class="form-control" id="text-field" placeholder="Enter text" v-model="input"></textarea>
         </div>
 
         <button type="submit" class="btn btn-success mb-3">Submit</button>
     </form>
 
-    <div id="response" class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3" v-if="response">
-        <strong>Réponse :</strong> {{ response }}
+    <div id="response" class="p-3 border rounded-3" v-if="response">
+        {{ response }}
     </div>
 </template>
 
