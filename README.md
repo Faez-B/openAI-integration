@@ -10,12 +10,17 @@ Make sure to install the dependencies:
 npm install
 ```
 
-In your ```nuxt.config.ts``` file, add your OpenAI API key:
+In your ```.env``` file, add your OpenAI API key:
+```bash
+OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+
+And in your ```nuxt.config.ts``` file, access the environment variable for the key:
 
 ```js
 runtimeConfig: {
     // The private keys which are only available server-side
-    OPENAI_API_KEY: 'sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    OPENAI_API_KEY: process.env.OPENAI_API_KEY,
     // Keys within public are also exposed client-side
     public: { }
 },
@@ -42,3 +47,8 @@ Locally preview production build:
 ```bash
 npm run preview
 ```
+
+## Disclaimer
+
+This is a demo application and is not intended for production use.
+All instructions are provided by OpenAI.
