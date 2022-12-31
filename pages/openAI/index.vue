@@ -3,13 +3,21 @@
 </script>
 
 <template>
-    <h1>
-        Veuillez choisir l'application à utiliser.
-    </h1>
+    <div class="index-container">
+        <div>
+            <h1>
+                Please choose the app you want to use.
+            </h1>
+        
+            <p class="d-block text-secondary fst-italic">
+                All prompts are in English.
+            </p>
+        </div>
+    </div>
 </template>
 
 <style scoped>
-    h1 {
+    .index-container {
         height: 90vh;
         display: flex;
         justify-content: center;

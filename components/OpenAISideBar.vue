@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar mb-3 md-mb-0">
+    <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar mb-3 mb-md-0">
 
         <div class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
             <i class="bi bi-robot pe-none me-2"></i>
