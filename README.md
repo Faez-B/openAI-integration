@@ -1,20 +1,24 @@
-# Nuxt 3 Minimal Starter
-
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+# Nuxt 3 + Bootstrap 5 + OpenAI API
 
 ## Setup
 
 Make sure to install the dependencies:
 
 ```bash
-# yarn
-yarn install
 
 # npm
 npm install
+```
 
-# pnpm
-pnpm install --shamefully-hoist
+In your ```nuxt.config.ts``` file, add your OpenAI API key:
+
+```js
+runtimeConfig: {
+    // The private keys which are only available server-side
+    OPENAI_API_KEY: 'sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    // Keys within public are also exposed client-side
+    public: { }
+},
 ```
 
 ## Development Server
@@ -38,5 +42,3 @@ Locally preview production build:
 ```bash
 npm run preview
 ```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
