@@ -1,5 +1,4 @@
 <template>
-    
     <div class="row">
         <div class="col-12 col-md-5 order-3 order-md-1">
             <OpenAIForm link="chat" />
@@ -33,7 +32,6 @@
                 Human: I'd like to cancel my subscription.
                 <br/>
                 AI: I understand, I can help you with canceling your subscription. Please provide me with your account details so that I can begin processing the cancellation.
-
             </div>
         </div>
     </div>
