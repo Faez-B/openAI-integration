@@ -1,37 +1,28 @@
 <script setup>
-    import axios from 'axios';
-
-    const runtimeConfig = useRuntimeConfig();
-
-    const { apiUrl } = runtimeConfig.public;
-
     const props = defineProps({
         link: String
     });
 
+    const { link } = props;
+
     const response = ref(null);
 
     const getResponse = async (prompt, link) => {
-
-        const data = {
-            prompt
-        };
-
         try {
-            await axios.post(`${apiUrl}/api/openai/${link}`, data)
+            await $fetch(`/api/openai/${link}`, { method: 'post', body: { prompt } })
                 .then( res => {
-                    response.value = res.data
+                    response.value = res;
+                    // console.log(res);
+                    // console.log(res.data);
                 })
                 .catch( err => {
                     console.log(err)
                 })
-
+            ;
         } catch (error) {
             console.error(error)
         }
     }
-
-    const { link } = props;
 
     const formSubmit = (e) => {
         e.preventDefault();
@@ -49,8 +40,11 @@
             <textarea class="form-control" id="text-field" placeholder="Enter text"></textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-success mb-3">Submit</button>
     </form>
 
-    <div id="response">{{ response }}</div>
+    <div id="response" class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3" v-if="response">
+        <strong>Réponse :</strong> {{ response }}
+    </div>
 </template>
+
