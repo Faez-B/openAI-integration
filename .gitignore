@@ -7,7 +7,7 @@ node_modules
 .env
 dist
 
-nuxt.config.ts
+# nuxt.config.ts
 
 .DS_Store
 /.DS_Store
