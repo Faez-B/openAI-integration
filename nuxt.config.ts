@@ -3,12 +3,9 @@ export default defineNuxtConfig({
     // Env vars
     runtimeConfig: {
         // The private keys which are only available server-side
-        apiSecret: '123',
+        OPENAI_API_KEY: 'sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
         // Keys within public are also exposed client-side
-        public: {
-          apiBase: 'https://jsonplaceholder.typicode.com/',
-          apiUrl: 'http://localhost:3001',
-        }
+        public: { }
     },
 
     vite: {
