@@ -10,11 +10,10 @@
 
     const getResponse = async (prompt, link) => {
         try {
-            await $fetch(`/api/openai/${link}`, { method: 'post', body: { prompt } })
+            await $fetch(`/api/openai/${link}`, { method: 'post', body: JSON.stringify({ prompt }) })
+            // await $fetch(`/api/openai/${link}`, { method: 'post', body: { prompt } })
                 .then( res => {
                     response.value = res;
-                    // console.log(res);
-                    // console.log(res.data);
                 })
                 .catch( err => {
                     console.log(err)
@@ -27,7 +26,7 @@
 
     const formSubmit = (e) => {
         e.preventDefault();
-        // getResponse(e.target[0].value, link);
+        // console.log(input.value, link);
         getResponse(input.value, link);
     }
 </script>
@@ -44,6 +43,10 @@
 
         <button type="submit" class="btn btn-success mb-3">Submit</button>
     </form>
+
+    <h5 v-if="response">
+        Réponse :
+    </h5>
 
     <div id="response" class="p-3 border rounded-3" v-if="response">
         {{ response }}

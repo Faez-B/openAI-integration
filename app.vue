@@ -18,10 +18,10 @@
 
     <main class="container-fluid">
       <div class="row">
-        <div class="col-2 px-0">
+        <div class="col-6 col-md-4 col-lg-2 px-0">
           <OpenAISideBar />
         </div>
-        <div class="col-10">
+        <div class="col-6 col-md-8 col-lg-10">
           <NuxtPage />
         </div>
       </div>
