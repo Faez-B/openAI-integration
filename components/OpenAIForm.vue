@@ -38,7 +38,7 @@
 
     <form @submit="formSubmit">
         <div class="mb-3">
-            <textarea class="form-control" id="text-field" placeholder="Enter text" v-model="input"></textarea>
+            <textarea rows="5" class="form-control" id="text-field" placeholder="Enter text" v-model="input"></textarea>
         </div>
 
         <button type="submit" class="btn btn-success mb-3">Submit</button>
