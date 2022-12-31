@@ -1,7 +1,3 @@
-<script setup>
-
-</script>
-
 <template>
-
+    <OpenAIForm link="explain-code" />
 </template>

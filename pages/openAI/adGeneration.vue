@@ -1,5 +1,3 @@
-<script setup></script>
-
 <template>
-    
+    <OpenAIForm link="ad-generation" />
 </template>
