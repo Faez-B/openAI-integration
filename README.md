@@ -1,5 +1,7 @@
 # Nuxt 3 + Bootstrap 5 + OpenAI API
 
+## Visit online
+[Here](https://open-ai-integration.vercel.app)
 ## Setup
 
 Make sure to install the dependencies:
