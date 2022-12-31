@@ -21,7 +21,7 @@
                 Example :
             </h2>
         
-            <div class="p-3 bg-light border rounded-3">
+            <div class="p-3 bg-light border rounded-3 example">
                 The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly.
                 <br/>
                 <br/>
@@ -36,3 +36,10 @@
         </div>
     </div>
 </template>
+
+<style scoped>
+    .example {
+        max-height: 35rem;
+        overflow: auto;
+    }
+</style>

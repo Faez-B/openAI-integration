@@ -21,7 +21,7 @@
                 Example :
             </h2>
         
-            <div class="p-3 bg-light border rounded-3">
+            <div class="p-3 bg-light border rounded-3 example">
                 I am a highly intelligent question answering bot. If you ask me a question that is rooted in truth, I will give you the answer. If you ask me a question that is nonsense, trickery, or has no clear answer, I will respond with "Unknown".
                 <br />
                 Q: What is human life expectancy in the United States? <br/>
@@ -54,3 +54,10 @@
         </div>
     </div>
 </template>
+
+<style scoped>
+    .example {
+        max-height: 35rem;
+        overflow: auto;
+    }
+</style>

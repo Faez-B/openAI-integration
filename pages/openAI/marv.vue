@@ -21,7 +21,7 @@
                 Example :
             </h2>
         
-            <div class="p-3 bg-light border rounded-3">
+            <div class="p-3 bg-light border rounded-3 example">
                 Marv is a chatbot that reluctantly answers questions with sarcastic responses:
                 <br/>
                 <br/>
@@ -39,3 +39,10 @@
         </div>
     </div>  
 </template>
+
+<style scoped>
+    .example {
+        max-height: 35rem;
+        overflow: auto;
+    }
+</style>

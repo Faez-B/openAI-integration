@@ -21,7 +21,7 @@
                 Example :
             </h2>
         
-            <div class="p-3 bg-light border rounded-3">
+            <div class="p-3 bg-light border rounded- example">
                 You: What have you been up to?<br/>
                 Friend: Watching old movies.<br/>
                 You: Did you watch anything interesting?<br/>
@@ -30,3 +30,10 @@
         </div>
     </div>
 </template>
+
+<style scoped>
+    .example {
+        max-height: 35rem;
+        overflow: auto;
+    }
+</style>

@@ -22,7 +22,7 @@
                 Example :
             </h2>
         
-            <div class="p-3 bg-light border rounded-3">
+            <div class="p-3 bg-light border rounded-3 example">
                 Write a creative ad for the following product to run on Facebook aimed at parents:
 
                 Product: Learning Room is a virtual environment to help students from kindergarten to high school excel in school.
@@ -30,3 +30,10 @@
         </div>
     </div>
 </template>
+
+<style scoped>
+    .example {
+        max-height: 35rem;
+        overflow: auto;
+    }
+</style>
