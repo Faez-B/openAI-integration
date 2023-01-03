@@ -1,3 +1,16 @@
+<script setup>
+    useHead({
+        title : "Home - Nuxt app",
+        meta : [
+            {
+                name : "description",
+                content : "This is a demo app for a Nuxt 3 app"
+            }
+        ]
+    })
+
+</script>
+
 <template>
     <div class="index-container">
       <di class="text-center">
