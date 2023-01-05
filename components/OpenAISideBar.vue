@@ -31,6 +31,7 @@
             <OpenAISidebarLink link="keywords" icon="text-wrap" title="Extract keywords"/>
             <OpenAISidebarLink link="notesSummary" icon="card-text" title="Generate summary"/>
             <OpenAISidebarLink link="studyNotes" icon="list-ol" title="Notes to study"/>
+            <OpenAISidebarLink link="imageGeneration" icon="image" title="Image generation"/>
         </ul>
 
     </div>
