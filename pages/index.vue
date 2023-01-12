@@ -13,12 +13,12 @@
 
 <template>
     <div class="index-container">
-      <di class="text-center">
+      <div class="text-center">
         <h1>Welcome to the index page</h1>
         <AppAlert>
           This is an auto-imported component
         </AppAlert>
-      </di>
+      </div>
     </div>
 
     <!-- In Dev : Only works if image is in folder assets/ (which itself is located in the root of the Nuxt project) -->

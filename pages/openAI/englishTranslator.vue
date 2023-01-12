@@ -1,7 +1,19 @@
+<script setup>
+    const params = {
+        model : "text-davinci-003", 
+        // prompt: "Translate this into 1. French, 2. Spanish and 3. Japanese:\n\nWhat rooms do you have available?\n\n1.",
+        temperature: 0.3,
+        max_tokens: 100,
+        top_p: 1.0,
+        frequency_penalty: 0.0,
+        presence_penalty: 0.0,
+    };
+</script>
+
 <template>
     <div class="row">
         <div class="col-12 col-md-5 order-3 order-md-1">
-            <OpenAIForm link="translator"/>  
+            <OpenAIForm :params="params" />
         </div>
 
         <div class="col-1 d-none d-md-block text-center order-md-2">

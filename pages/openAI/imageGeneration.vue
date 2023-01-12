@@ -2,9 +2,11 @@
     const input = ref("");
     const response = ref(null);
 
-    const getResponse = async (prompt) => {
+    const formSubmit = async (e) => {
+        e.preventDefault();
+
         try {
-            await $fetch(`/api/image-generate`, { method: 'post', body: JSON.stringify({ prompt }) })
+            await $fetch('/api/image-generate', { method: 'POST', body: JSON.stringify({ prompt: input.value }) })
                 .then( res => {
                     console.log(res);
                     response.value = res;
@@ -16,11 +18,6 @@
         } catch (error) {
             console.error(error)
         }
-    }
-
-    const formSubmit = (e) => {
-        e.preventDefault();
-        getResponse(input.value);
     }
 </script>
 

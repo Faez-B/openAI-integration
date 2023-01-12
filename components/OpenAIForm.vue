@@ -1,17 +1,18 @@
 <script setup>
     const props = defineProps({
-        link: String
+        params: Object
     });
 
-    const { link } = props;
+    const { params } = props;
 
     const input = ref("");
     const response = ref(null);
 
-    const getResponse = async (prompt, link) => {
+    const formSubmit = async (e) => {
+        e.preventDefault();
+        
         try {
-            await $fetch(`/api/openai/${link}`, { method: 'post', body: JSON.stringify({ prompt }) })
-            // await $fetch(`/api/openai/${link}`, { method: 'post', body: { prompt } })
+            await $fetch('/api/generate', { method: 'POST', body: JSON.stringify({ prompt : input.value, otherParams : params }) })
                 .then( res => {
                     response.value = res;
                 })
@@ -22,12 +23,6 @@
         } catch (error) {
             console.error(error)
         }
-    }
-
-    const formSubmit = (e) => {
-        e.preventDefault();
-        // console.log(input.value, link);
-        getResponse(input.value, link);
     }
 </script>
 

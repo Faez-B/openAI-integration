@@ -1,7 +1,19 @@
+<script setup>
+    const params = {
+        model : "text-davinci-003", 
+        temperature: 0,
+        max_tokens: 60,
+        top_p: 1.0,
+        frequency_penalty: 0.0,
+        presence_penalty: 0.0,
+        additional_prompt: "Q: Who is Batman?\nA: Batman is a fictional comic book character.\n\nQ: What is torsalplexity?\nA: ?\n\nQ: What is Devz9?\nA: ?\n\nQ: Who is George Lucas?\nA: George Lucas is American film director and producer famous for creating Star Wars.\n\nQ: What is the capital of California?\nA: Sacramento.\n\nQ: What orbits the Earth?\nA: The Moon.\n\nQ: Who is Fred Rickerson?\nA: ?\n\nQ: What is an atom?\nA: An atom is a tiny particle that makes up everything.\n\nQ: Who is Alvan Muntz?\nA: ?\n\nQ: What is Kozar-09?\nA: ?\n\nQ: How many moons does Mars have?\nA: Two, Phobos and Deimos.\n\nQ: ",
+    };
+</script>
+
 <template>
     <div class="row">
         <div class="col-12 col-md-5 order-3 order-md-1">
-            <OpenAIForm link="facts"/>  
+            <OpenAIForm :params="params" />
         </div>
 
         <div class="col-1 d-none d-md-block text-center order-md-2">

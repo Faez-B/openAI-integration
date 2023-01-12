@@ -1,7 +1,18 @@
+<script setup>
+    const params = {
+        model : "text-davinci-003", 
+        temperature: 0.5,
+        max_tokens: 60,
+        top_p: 1.0,
+        frequency_penalty: 0.8,
+        presence_penalty: 0.0,
+    };
+</script>
+
 <template>
     <div class="row">
         <div class="col-12 col-md-5 order-3 order-md-1">
-            <OpenAIForm link="keywords" />
+            <OpenAIForm :params="params" />
         </div>
 
         <div class="col-1 d-none d-md-block text-center order-md-2">
