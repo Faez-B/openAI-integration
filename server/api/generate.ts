@@ -8,7 +8,7 @@ if ( ! OPENAI_API_KEY ) {
 }
 
 const configuration = new Configuration({
-    apiKey: OPENAI_API_KEY,
+    // apiKey: OPENAI_API_KEY,
 });
 
 const openai = new OpenAIApi(configuration);
