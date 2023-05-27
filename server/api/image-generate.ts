@@ -1,7 +1,6 @@
 import { Configuration, OpenAIApi } from "openai";
 
-const runtimeConfig = useRuntimeConfig();
-const { OPENAI_API_KEY } = runtimeConfig;
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
 if ( ! OPENAI_API_KEY ) {
     console.log("No OpenAI API key found. Please set the OPENAI_API_KEY environment variable.");
