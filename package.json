@@ -17,5 +17,8 @@
     "bootstrap-icons": "^1.10.3",
     "dotenv": "^16.0.3",
     "openai": "^4.27.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
   }
 }
